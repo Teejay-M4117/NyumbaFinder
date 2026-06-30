@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyumba Finder Kenya</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <div class="logo">🏠 NyumbaFinder</div>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#featured">Featured</a>
+        <a href="favorites.html">Favorites ❤️</a>
+    </nav>
+
+    <button id="menuBtn">☰</button>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Find Your Dream Home in Kenya</h1>
+
+        <p>Search houses, apartments, bedsitters & villas across Kenya instantly.</p>
+
+        <div class="hero-search">
+            <i class="fas fa-search"></i>
+            <input id="searchInput" type="text" placeholder="Search by town, county, price...">
+        </div>
+
+        <div class="chips">
+            <button onclick="quickSearch('Nairobi')">Nairobi</button>
+            <button onclick="quickSearch('Mombasa')">Mombasa</button>
+            <button onclick="quickSearch('Kisumu')">Kisumu</button>
+            <button onclick="quickSearch('Nakuru')">Nakuru</button>
+        </div>
+
+    </div>
+
+    <div class="filters">
+
+    <select id="bedFilter">
+        <option value="">Bedrooms</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+
+    <select id="priceFilter">
+        <option value="">Price</option>
+        <option value="10000">Below 10k</option>
+        <option value="30000">Below 30k</option>
+        <option value="60000">Below 60k</option>
+    </select>
+
+</div>
+
+</section>
+<section id="featured" class="featured">
+
+    <h2>⭐ Featured Houses</h2>
+
+    <div id="featuredContainer" class="house-grid"></div>
+
+</section>
+
+<!-- HOUSES -->
+<section class="houses-section">
+
+    <h2>Available Houses</h2>
+
+    <div id="houseContainer" class="house-grid"></div>
+
+</section>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

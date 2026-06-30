@@ -1,0 +1,348 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#222;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:#1565c0;
+    color:#fff;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+}
+
+/* HERO */
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero-content p{
+    margin-bottom:20px;
+    opacity:0.9;
+}
+
+/* SEARCH */
+.hero-search{
+    display:flex;
+    align-items:center;
+    background:white;
+    padding:12px 15px;
+    border-radius:50px;
+    max-width:500px;
+    margin:0 auto;
+}
+
+.hero-search input{
+    border:none;
+    outline:none;
+    flex:1;
+    font-size:16px;
+    padding-left:10px;
+}
+
+/* CHIPS */
+.chips{
+    margin-top:15px;
+}
+
+.chips button{
+    margin:5px;
+    padding:8px 15px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    background:#ffffff20;
+    color:white;
+    border:1px solid white;
+}
+
+/* SECTION */
+.houses-section{
+    padding:60px 8%;
+}
+
+.houses-section h2{
+    margin-bottom:20px;
+}
+
+/* GRID */
+.house-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+/* CARD */
+.house-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.house-card:hover{
+    transform:translateY(-5px);
+}
+
+.house-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.house-content{
+    padding:15px;
+}
+
+.price{
+    color:#1565c0;
+    font-weight:700;
+    margin:10px 0;
+}
+
+/* BUTTON */
+.view-btn{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#1565c0;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.view-btn:hover{
+    background:#0d47a1;
+}
+
+/* FAVORITE BUTTON */
+.fav-btn{
+    border:none;
+    background:#fff;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* BUTTON ROW */
+.btn-row{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+}
+
+/* MODAL */
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+}
+
+.modal-content{
+    background:white;
+    padding:20px;
+    width:90%;
+    max-width:500px;
+    border-radius:15px;
+    position:relative;
+}
+
+.modal-content img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.close{
+    position:absolute;
+    top:10px;
+    right:15px;
+    font-size:25px;
+    cursor:pointer;
+}
+
+.modal-btns{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.modal-btns a{
+    flex:1;
+    text-align:center;
+    padding:10px;
+    border-radius:10px;
+    color:white;
+    text-decoration:none;
+}
+
+.modal-btns .call{
+    background:#1565c0;
+}
+
+.modal-btns .whatsapp{
+    background:#25D366;
+}
+
+/* DARK MODE */
+body.dark{
+    background:#0f172a;
+    color:#e5e7eb;
+}
+
+body.dark .house-card{
+    background:#1e293b;
+    color:white;
+}
+
+body.dark .modal-content{
+    background:#1e293b;
+    color:white;
+}
+
+body.dark .navbar{
+    background:#0b1220;
+}
+
+body.dark .hero-search{
+    background:#1e293b;
+    color:white;
+}
+
+body.dark .hero-search input{
+    background:transparent;
+    color:white;
+}
+
+.slider{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.slider img{
+    width:100%;
+    border-radius:10px;
+}
+
+.slider button{
+    position:absolute;
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.prev{
+    left:10px;
+}
+
+.next{
+    right:10px;
+}
+
+.map-btn{
+    width:100%;
+    margin-top:10px;
+    padding:10px;
+    border:none;
+    background:#f59e0b;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.filters{
+    margin-top:15px;
+}
+
+.filters select{
+    padding:10px;
+    margin:5px;
+    border-radius:10px;
+    border:none;
+}
+.skeleton{
+    background:#ddd;
+    height:200px;
+    border-radius:10px;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{opacity:0.6;}
+    50%{opacity:1;}
+    100%{opacity:0.6;}
+}
+
+#menuBtn{
+    display:none;
+    background:none;
+    color:white;
+    font-size:24px;
+    border:none;
+}
+
+@media(max-width:768px){
+
+.nav-links{
+    display:none;
+    flex-direction:column;
+    background:#1565c0;
+    position:absolute;
+    top:60px;
+    right:0;
+    width:200px;
+    padding:10px;
+}
+
+.nav-links.show{
+    display:flex;
+}
+
+#menuBtn{
+    display:block;
+}
+
+}

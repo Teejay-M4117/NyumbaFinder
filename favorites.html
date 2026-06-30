@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favorites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 style="padding:20px;">❤️ Saved Houses</h1>
+
+<div id="favContainer" class="house-grid"></div>
+
+<script src="js/data.js"></script>
+<script>
+const favContainer = document.getElementById("favContainer");
+
+let favs = JSON.parse(localStorage.getItem("favorites")) || [];
+
+const favHouses = houses.filter(h => favs.includes(h.id));
+
+favHouses.forEach(h => {
+
+    favContainer.innerHTML += `
+    <div class="house-card">
+
+        <img src="${h.image}">
+
+        <div class="house-content">
+
+            <h3>${h.title}</h3>
+            <p>${h.location}</p>
+
+            <div class="price">KES ${h.price.toLocaleString()}</div>
+
+        </div>
+
+    </div>
+    `;
+});
+</script>
+
+</body>
+</html>
